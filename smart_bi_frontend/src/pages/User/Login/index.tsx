@@ -18,9 +18,10 @@ import {
 import { Helmet, history, useModel } from '@umijs/max';
 import { Alert, Tabs, message } from 'antd';
 import { createStyles } from 'antd-style';
-import React, { useState } from 'react';
+import React, {useEffect, useState} from 'react';
 import { flushSync } from 'react-dom';
 import Settings from '../../../../config/defaultSettings';
+import {listChartByPageUsingPost} from "@/services/smart_bi/chartController";
 const useStyles = createStyles(({ token }) => {
   return {
     action: {
@@ -145,8 +146,8 @@ const Login: React.FC = () => {
             maxWidth: '75vw',
           }}
           logo={<img alt="logo" src="/logo.svg" />}
-          title="Ant Design"
-          subTitle={'Ant Design 是西湖区最具影响力的 Web 设计规范'}
+          title="Smart BIs"
+          subTitle={'Smart BIs 是西湖区最具影响力的 Web 设计规范'}
           initialValues={{
             autoLogin: true,
           }}

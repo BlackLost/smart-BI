@@ -73,7 +73,7 @@ export default defineConfig({
    * @name layout 插件
    * @doc https://umijs.org/docs/max/layout-menu
    */
-  title: 'Ant Design Pro',
+  title: 'Smart BI',
   layout: {
     locale: true,
     ...defaultSettings,
@@ -135,9 +135,11 @@ export default defineConfig({
       mock: false,
     },
     {
+      // requestLibPath: "import { request } from '@umijs/max'",
       requestLibPath: "import { request } from '@umijs/max'",
-      schemaPath: 'https://gw.alipayobjects.com/os/antfincdn/CA1dOm%2631B/openapi.json',
-      projectName: 'swagger',
+      // schemaPath: 'https://gw.alipayobjects.com/os/antfincdn/CA1dOm%2631B/openapi.json',
+      schemaPath: 'http://localhost:12345/api/v2/api-docs',
+      projectName: 'smart_bi',
     },
   ],
   mfsu: {
